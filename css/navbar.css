@@ -1,0 +1,259 @@
+/*
+nav{
+    position:sticky;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    min-height:10vh;
+    background-color: #000000;
+    width: 100%;
+    top:0;
+    padding: 1rem;
+    z-index: 1000;
+}
+    */
+a{
+    text-decoration: none;
+}
+nav a{
+    color:#42f879;
+}
+nav a:hover{
+    color:#42f879;
+    text-decoration: none;
+
+}
+#login{
+    color:#42f879;
+}
+/* .logo h3{
+    font-family: 'Sacramento',"cursive" ;
+    font-weight: 500;
+    text-align: center;
+    font-size:25px;
+    font-display: swap;
+    text-shadow: 
+    1px 1px 1px #919191,
+    1px 2px 1px #919191,
+    1px 3px 1px #919191,
+    1px 4px 1px #919191,
+    1px 5px 1px #919191,
+    1px 6px 1px #919191,
+    1px 7px 1px #919191,
+    1px 8px 1px #919191,
+    1px 9px 1px #919191,
+    1px 10px 1px #919191,
+    1px 18px 6px rgba(16,16,16,0.4),
+    1px 22px 10px rgba(16,16,16,0.2),
+    1px 25px 35px rgba(16,16,16,0.2),
+    1px 30px 60px rgba(16,16,16,0.4);
+} */
+/*
+.logo-name{
+     color:#42f879;
+}
+.logo-name:hover{
+    color:#42f879;
+    text-decoration: none;
+}
+
+.nav-links{
+    display:flex;
+    list-style: none;
+    width:50%;
+    justify-content: space-around;
+    letter-spacing: 2px;
+    font-weight: 600;
+    font-size:14px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.burger div{
+    background-color:#42f879;
+    width:25px;
+    height:3px;
+    margin:5px;
+    transition: all 0.3s ease;
+}
+
+.burger{
+    display:none;
+    cursor: pointer;
+}
+
+@media screen and (max-width:1024px){
+    .nav-links{
+        width:80%;
+    }
+
+}
+
+@media screen and (max-width:768px){
+    body{
+        overflow-x: hidden;
+    }
+    .nav-links{
+       position:absolute;
+       right:0px;
+       height:90vh;
+       top:10vh;
+       background-color: #ffffff;
+       display:flex;
+       flex-direction: column;
+       align-items: center;
+       width:60%;
+       transform:translateX(100%);
+       transition: transform 0.5s ease-in;
+    }
+    .nav-links li{
+        opacity: 0;
+    }
+    .burger{
+        display: block;
+    }
+    nav a{
+        color:rgb(231, 216, 216);
+    }
+    nav a:hover{
+        color:#f7f7f7;
+        text-decoration: none;
+    
+    }
+}
+.nav-active{
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2{
+    opacity:0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
+}
+    */
+
+    
+* {
+     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;             
+}
+        
+ nav {
+    position:sticky;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    min-height:10vh;
+    background-color: #000000;
+    width: 100%;
+    top:0;
+    padding: 1rem;
+    z-index: 1000;
+}
+        
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+        
+/* Fix for the missing < in your a tags */
+.nav-links li a {
+    color:#42f879;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    position: relative;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+        
+/* Underline animation on hover */
+.nav-links li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    color: black;
+    background-color: #42f879;
+    transition: width 0.3s ease;
+}
+        
+        .nav-links li a:hover::after {
+            width: 100%;
+        }
+        
+        /* Background color change on hover */
+        .nav-links li a:hover {
+            color: #ecf0f1;
+        }
+        
+        /* Special style for login button */
+        #login {
+            background-color: #42f879;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            color: rgb(20, 18, 18);
+        }
+        
+        #login:hover {
+            background-color: #42f879;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            color: #ecf0f1;
+        }
+        
+        /* Hamburger menu styles */
+        .burger {
+            display: none;
+            cursor: pointer;
+        }
+        
+        .burger div {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        /* Hamburger hover animation */
+        .burger:hover div {
+            background-color: #42f879;
+        }
+        
+        .burger:hover .line1 {
+            transform: translateY(-2px);
+        }
+        
+        .burger:hover .line3 {
+            transform: translateY(2px);
+        }
+        
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .burger {
+                display: block;
+            }
+        }

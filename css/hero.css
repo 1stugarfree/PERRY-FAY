@@ -1,0 +1,33 @@
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color:#e6e6ef;
+    font-weight: bolder;
+}
+.hero-content h3{
+    box-shadow:10%;
+    border-radius:10%;
+    backdrop-filter:blur(5px) ;
+    color: #ececef ;
+}
+
+.custom-span {
+  font-weight: bold;
+  color:#42f879;
+}

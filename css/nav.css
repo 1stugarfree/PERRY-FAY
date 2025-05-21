@@ -1,0 +1,230 @@
+
+nav{
+    position:sticky;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    min-height:10vh;
+    background-color: #000000;
+    width: 100%;
+    top:0;
+    padding: 1rem;
+    z-index: 1000;
+}
+
+  
+    
+a{
+    color: #42f879;
+    text-decoration: none;
+}
+
+nav a:hover{
+   color: #42f879;
+}
+
+/* .logo h3{
+    font-family: 'Sacramento',"cursive" ;
+    font-weight: 500;
+    text-align: center;
+    font-size:25px;
+    font-display: swap;
+    text-shadow: 
+    1px 1px 1px #919191,
+    1px 2px 1px #919191,
+    1px 3px 1px #919191,
+    1px 4px 1px #919191,
+    1px 5px 1px #919191,
+    1px 6px 1px #919191,
+    1px 7px 1px #919191,
+    1px 8px 1px #919191,
+    1px 9px 1px #919191,
+    1px 10px 1px #919191,
+    1px 18px 6px rgba(16,16,16,0.4),
+    1px 22px 10px rgba(16,16,16,0.2),
+    1px 25px 35px rgba(16,16,16,0.2),
+    1px 30px 60px rgba(16,16,16,0.4);
+} */
+ .log{
+    width: 100px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+ }
+ /* Navbar styles */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #000000;
+  /* box-shadow: 0 2px 5px rgba(0,0,0,0.1); */
+  position:sticky;
+  min-height:10vh;
+  top:0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.logo img {
+  height: 50px; /* Adjust as needed */
+  width: auto;
+}
+      
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color:#42f879;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color:#42f879;
+    text-decoration: none;
+}
+
+/* Burger menu styles */
+.burger-menu {
+  display: none;
+  background: none;
+  border: none;
+  backdrop-filter: blur(12);
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 1000;
+}
+
+.burger-menu .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #42f879;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+  border-radius: 3px;
+}
+
+/* Burger menu animation when active */
+.burger-menu.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.burger-menu.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-menu.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 70%;
+    max-width: 300px;
+    background-color:#0000;
+    backdrop-filter:   blur(10px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    transition: right 0.5s ease;
+    z-index: 999;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .burger-menu {
+    display: block;
+  }
+}
+
+/* Ensure burger menu is visible on the product page */
+.product-page .burger-menu {
+    display: block !important;
+}
+
+.product-page .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 70%;
+    max-width: 300px;
+    background-color: #0000;
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    transition: right 0.5s ease;
+    z-index: 999;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+}
+
+.product-page .nav-links.active {
+    right: 0;
+}
+
+@media (max-width: 414px) {
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 70%;
+    max-width: 300px;
+    background-color:#0000;
+    backdrop-filter:   blur(10px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    transition: right 0.5s ease;
+    z-index: 999;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .burger-menu {
+    display: block;
+  }
+}
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 998;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.nav-links.active ~ .menu-overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (min-width: 769px) {
+  .menu-overlay {
+    display: none;
+  }
+}

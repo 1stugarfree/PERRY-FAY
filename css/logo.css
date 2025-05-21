@@ -1,0 +1,112 @@
+
+
+.logo h3 {
+  font-size: 4rem;
+  color: #fff;
+  text-shadow: 
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #0fa,
+    0 0 82px #0fa,
+    0 0 92px #0fa,
+    0 0 102px #0fa,
+    0 0 151px #0fa;
+  animation: flicker 1.5s infinite alternate;
+}
+
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    text-shadow: 
+      0 0 4px #fff,
+      0 0 11px #fff,
+      0 0 19px #fff,
+      0 0 40px #0fa,
+      0 0 80px #0fa,
+      0 0 90px #0fa,
+      0 0 100px #0fa,
+      0 0 150px #0fa;
+  }
+  20%, 24%, 55% { text-shadow: none; }
+}
+/* .logo h3 {
+  position: relative;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.logo h3::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transform: scaleY(-1);
+  opacity: 0.3;
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.5));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+} */
+/* 
+.logo h3 {
+  position: relative;
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+}
+
+.logo h3::before,
+.logo h3::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.logo h3::before {
+  color: #0ff;
+  z-index: -1;
+  animation: glitch 3s infinite;
+}
+
+.logo h3::after {
+  color: #f0f;
+  z-index: -2;
+  animation: glitch 2s infinite reverse;
+}
+
+@keyframes glitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(-3px, 3px); }
+  40% { transform: translate(-3px, -3px); }
+  60% { transform: translate(3px, 3px); }
+  80% { transform: translate(3px, -3px); }
+  100% { transform: translate(0); }
+} */
+/* .logo h3 {
+  position: relative;
+  font-size: 5rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+.logo h3::before,
+.logo h3::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.logo h3::before {
+  color: #ff00ff;
+  z-index: -1;
+  transform: translate(5px, 5px);
+}
+
+.logo h3::after {
+  color: #00ffff;
+  z-index: -2;
+  transform: translate(10px, 10px);
+} */
